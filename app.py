@@ -24,15 +24,17 @@ def main():
 		st.write("PhD Wojciech Oronowicz-Jaśkowiak, Polish-Japanese Academy of Information Technology")
 		st.write("PhD Antonina Doroszewska, Medical University of Warsaw")
 		st.header("App")
+		st.write("(definitely no – definitely yes)")
+
 
 	with left:
-		P1_slider = st.slider("Stopień, w jakim SP dostosowuje swoją komunikację niewerbalną do sytuacji", value=1, min_value=1, max_value=7)
-		P2_slider = st.slider("Stopień, w jakim zrozumiały i poprawny gramatycznie jest tok wypowiedzi SP", value=1, min_value=1, max_value=7)
+		P1_slider = st.slider("Whether the simulated patient adjusts his/her non-verbal communication to the situation", value=1, min_value=1, max_value=7)
+		P2_slider = st.slider("Whether the simulated patient is understandable and grammatically correct", value=1, min_value=1, max_value=7)
 
 	with right:
-		P4_slider = st.slider("Stopień w jakim SP okazuje emocje związane z rozmową", value=1, min_value=1, max_value=7)
-		P5_slider = st.slider("Stopień w jakim SP reaguje adekwatnie do zachowania studenta", value=1, min_value=1, max_value=7)
-		P6_slider = st.slider("Jeżeli pytasz się SP o informację zwrotną, to oceń sposób, w jaki SP udziela informacji zwrotnej po zakończeniu zajęć (merytorycznie oraz technicznie)", value=3, min_value=1, max_value=7)
+		P4_slider = st.slider("Whether the simulated patient shows the emotion during the conversation/related to the conversation", value=1, min_value=1, max_value=7)
+		P5_slider = st.slider("Whether the simulated patient responds adequately to the student's behavior", value=1, min_value=1, max_value=7)
+		P6_slider = st.slider("If you ask the simulated patient for feedback, evaluate the way in which the SP provides feedback after the end of the class (substantively and technically)", value=3, min_value=1, max_value=7)
 
 	data = [[P1_slider, P2_slider, P4_slider, P5_slider, P6_slider]]
 	good = model.predict(data)
