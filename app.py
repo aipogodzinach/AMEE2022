@@ -58,7 +58,7 @@ def main():
 			st.write('')
 		st.caption("We'd love to hear feedback ❤️ antonina.doroszewska@wum.edu.pl | oronowiczjaskowiak@pjwstk.edu.pl")
 		st.caption("Oronowicz-Jaśkowiak, W., Doroszewska, A. (2022, August). Use of deep neural networks in evaluating medical communication. Poster presented during AMEE Conference, Lyon. International Association for Medical Education in Europe.")
-		st.caption("The model was deployed using streamlit app 🎈 App developed by Wojciech Oronowicz-Jaśkowiak, PhD 🤖")
+		st.caption("App developed by Wojciech Oronowicz-Jaśkowiak 🤖 ML model trained by Antonina Doroszewska & Wojciech Oronowicz-Jaśkowiak 🎈 ")
 		st.image("https://i.ibb.co/gRRzqST/Logo-tarcza-black-150x150-mm-0.jpg")
 
 if __name__ == "__main__":
