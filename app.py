@@ -12,7 +12,7 @@ model = pickle.load(open(filename,'rb'))
 X_d = {0:"No",1:"Yes"}
 def main():
 
-	st.set_page_config(page_title="AME2022")
+	st.set_page_config(page_title="predictSP")
 	overview = st.container()
 	left, right = st.columns(2)
 	prediction = st.container()
@@ -23,7 +23,7 @@ def main():
 		st.subheader("AMEE Conference, Lyon 2022")
 		st.write("PhD Wojciech Oronowicz-Jaśkowiak, Polish-Japanese Academy of Information Technology")
 		st.write("PhD Antonina Doroszewska, Medical University of Warsaw")
-		st.header("App")
+		st.header("predictSP")
 		st.write("(definitely no – definitely yes)")
 
 
@@ -49,13 +49,14 @@ def main():
 		else:
 			st.write('')
 		if st.button('How does it work? (simplyfield)'):
-			st.write('...')
+			st.write('The application is designed to support the recruitment process of simulated patients. It was created on the basis of the experiences of teachers working with SP at the Department of Medical Communication of the Medical University of Warsaw, which show that SP often quit their jobs and it is necessary to constantly recruit new people. In the recruitment process, it is crucial to choose the right people who will carry out the tasks set for the SPs during the classes. The application uses deep neural network, thanks to which people participating in the recruitment, by answering questions, can obtain information whether a given candidate can perform the role of an SP. The results may support the decision-making process in selecting candidates for the SP.')
 		else:
 			st.write('')
 		if st.button('Practical use of our app'):
-			st.write('...')
+			st.write('The application is worth using during recruitment interviews with candidates for SP. An important element of these interviews should be playing a short interview scenario between the patient and the doctor, which will allow for a preliminary assessment of how the candidate plays the assigned role. After the scenario has been played, the followers can independently answer the questions provided in the app. Then discuss the observations and the results of estimation made by the deep neural network.')
 		else:
 			st.write('')
+		st.caption("We'd love to hear feedback ❤️ antonina.doroszewska@wum.edu.pl | oronowiczjaskowiak@pjwstk.edu.pl")
 		st.caption("Oronowicz-Jaśkowiak, W., Doroszewska, A. (2022, August). Use of deep neural networks in evaluating medical communication. Poster presented during AMEE Conference, Lyon. International Association for Medical Education in Europe.")
 		st.caption("The model was deployed using streamlit app 🎈 App developed by Wojciech Oronowicz-Jaśkowiak, PhD 🤖")
 		st.image("https://i.ibb.co/gRRzqST/Logo-tarcza-black-150x150-mm-0.jpg")
