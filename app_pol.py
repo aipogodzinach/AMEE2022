@@ -9,7 +9,7 @@ startTime = datetime.now()
 filename = "model.sv"
 model = pickle.load(open(filename,'rb'))
 
-X_d = {0:"No",1:"Yes"}
+X_d = {0:"Nie",1:"Tak"}
 def main():
 
 	st.set_page_config(page_title="predictSP")
@@ -21,8 +21,8 @@ def main():
 		st.title("Wykorzystanie AI w komunikacji medycznej")
 		st.subheader("Wspomaganie procesu rekrutacyjnego SP")
 		st.subheader("AMEE Conference, Lyon 2022")
-		st.write("PhD Wojciech Oronowicz-Jaśkowiak, Polish-Japanese Academy of Information Technology")
-		st.write("PhD Antonina Doroszewska, Medical University of Warsaw")
+		st.write("dr Wojciech Oronowicz-Jaśkowiak, Polsko-Japońska Akademia Technik Komputerowych w Warszawie")
+		st.write("dr Antonina Doroszewska, Warszawski Uniwersytet Medyczny")
 		st.header("predictSP")
 		st.write("(zdecydowanie nie – zdecydowanie tak)")
 
@@ -41,7 +41,7 @@ def main():
 	s_confidence = model.predict_proba(data)
 
 	with prediction:
-		st.subheader("Wynik pozytywny? {0}".format("Yes" if good[0] == 1 else "No"))
+		st.subheader("Wynik pozytywny? {0}".format("Tak" if good[0] == 1 else "Nie"))
 		st.write("Prawdopodobieństwo {0:.2f} %".format(s_confidence[0][good][0] * 100))
 		st.header("Documentation (English)")
 		if st.button('How does it work?'):
